@@ -1,2 +1,5 @@
-# learning-golang
-Resources as part of golang learning
+#### Learning go
+
+-----
+
+A simple repository for documenting and learning the basic functionality of `go`.
