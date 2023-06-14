@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // https://gobyexample.com/values
-func Values() {
+func main() {
 	fmt.Println("Go" + "Lang")
 	fmt.Println(100)
 	fmt.Println("7.0/3.0 =", 7.0/3.0)
