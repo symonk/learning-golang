@@ -7,7 +7,7 @@ import (
 
 func main() {
 	i := 1
-	// A very basic for loop
+	// A very basic fo loop
 	for i <= 10 {
 		fmt.Println(i)
 		i++
