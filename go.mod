@@ -1,3 +1,3 @@
 module github.com/symonk/learning-golang
 
-go 1.13
+go 1.20

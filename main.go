@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"github.com/symonk/learning-golang/helloworld"
+	"github.com/symonk/learning-golang/values"
+)
 
 func main() {
-	fmt.Println("Main!")
-
+	helloworld.Run()
+	values.Run()
 }
