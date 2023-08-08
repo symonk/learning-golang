@@ -1,27 +1,21 @@
 package values
 
 import (
-	"fmt"
-	"reflect"
+	"github.com/symonk/learning-golang/utils"
 )
 
 // Basic examples of some of the primitive types in golang.
 func Run() {
 	var myString string = "myString"
-	printValueAndType(myString)
+	utils.PrintValueAndType(myString)
 
 	myInteger := 100
-	printValueAndType(myInteger)
+	utils.PrintValueAndType(myInteger)
 
 	myFloat := 200.45
-	printValueAndType(myFloat)
+	utils.PrintValueAndType(myFloat)
 
 	myBoolean := true
-	printValueAndType(myBoolean)
-
-}
-
-func printValueAndType(element any) {
-	fmt.Printf("element was type (%s) with value of '%v'\n", reflect.TypeOf(element), element)
+	utils.PrintValueAndType(myBoolean)
 
 }
