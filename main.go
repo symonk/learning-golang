@@ -4,6 +4,7 @@ import (
 	"github.com/symonk/learning-golang/constants"
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/helloworld"
+	"github.com/symonk/learning-golang/ifelse"
 	"github.com/symonk/learning-golang/values"
 	"github.com/symonk/learning-golang/variables"
 )
@@ -15,4 +16,5 @@ func main() {
 	variables.Run()
 	constants.Run()
 	forloop.Run()
+	ifelse.Run()
 }
