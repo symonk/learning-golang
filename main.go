@@ -6,6 +6,7 @@ import (
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/helloworld"
 	"github.com/symonk/learning-golang/ifelse"
+	"github.com/symonk/learning-golang/maps"
 	"github.com/symonk/learning-golang/slices"
 	"github.com/symonk/learning-golang/switches"
 	"github.com/symonk/learning-golang/values"
@@ -13,7 +14,7 @@ import (
 )
 
 func main() {
-	/* Run all modules */
+	/* Run all modules synchronously*/
 	helloworld.Run()
 	values.Run()
 	variables.Run()
@@ -23,4 +24,5 @@ func main() {
 	switches.Run()
 	arrays.Run()
 	slices.Run()
+	maps.Run()
 }
