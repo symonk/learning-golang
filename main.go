@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/symonk/learning-golang/arrays"
 	"github.com/symonk/learning-golang/constants"
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/helloworld"
@@ -11,7 +12,7 @@ import (
 )
 
 func main() {
-	/* Run all modules */
+	/* Run all modules synchronously */
 	helloworld.Run()
 	values.Run()
 	variables.Run()
@@ -19,4 +20,5 @@ func main() {
 	forloop.Run()
 	ifelse.Run()
 	switches.Run()
+	arrays.Run()
 }
