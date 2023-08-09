@@ -5,6 +5,7 @@ import (
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/helloworld"
 	"github.com/symonk/learning-golang/ifelse"
+	"github.com/symonk/learning-golang/switches"
 	"github.com/symonk/learning-golang/values"
 	"github.com/symonk/learning-golang/variables"
 )
@@ -17,4 +18,5 @@ func main() {
 	constants.Run()
 	forloop.Run()
 	ifelse.Run()
+	switches.Run()
 }
