@@ -2,7 +2,12 @@
 
 -----
 
-A simple repository for documenting and learning the basic functionality of `go`.
+A simple repository for documenting and learning the basic functionality of `go`.  The repository is simple,
+each module contains a `main.go` and the entrypoint to that module is the `Run` method.  Creating multiple
+`main` functions in each package is not viable.  The `main.go` in the root directory synchronously calls
+all the examples `Run` functions sequentially in line with the table of contents below.
+
+-----
 
 
 ### Table Of Contents:
