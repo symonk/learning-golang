@@ -7,4 +7,4 @@ A simple repository for documenting and learning the basic functionality of `go`
 
 ### Table Of Contents:
 
-* [Hello World](helloworld/)
+* [Hello World](helloworld/main.go)
