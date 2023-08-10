@@ -18,6 +18,7 @@ import (
 	"github.com/symonk/learning-golang/timers"
 	"github.com/symonk/learning-golang/values"
 	"github.com/symonk/learning-golang/variables"
+	"github.com/symonk/learning-golang/workergroups"
 )
 
 var (
@@ -35,6 +36,7 @@ var (
 		ranges.Run,
 		timers.Run,
 		tickers.Run,
+		workergroups.Run,
 	}
 )
 
