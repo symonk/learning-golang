@@ -25,4 +25,4 @@ all the examples `Run` functions sequentially in line with the table of contents
 * [11 - Range](ranges/main.go)
 * [12 - Timers](timers/main.go)
 * [13 - Tickers](tickers/main.go)
-* [14 - WorkerGroups](workgroups/main.go)
+* [14 - WorkerGroups](workergroups/main.go)
