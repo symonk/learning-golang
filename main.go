@@ -14,6 +14,7 @@ import (
 	"github.com/symonk/learning-golang/ranges"
 	"github.com/symonk/learning-golang/slices"
 	"github.com/symonk/learning-golang/switches"
+	"github.com/symonk/learning-golang/timers"
 	"github.com/symonk/learning-golang/values"
 	"github.com/symonk/learning-golang/variables"
 )
@@ -31,6 +32,7 @@ var (
 		slices.Run,
 		maps.Run,
 		ranges.Run,
+		timers.Run,
 	}
 )
 

@@ -23,3 +23,4 @@ all the examples `Run` functions sequentially in line with the table of contents
 * [09 - Slices](slices/main.go)
 * [10 - Maps](maps/main.go)
 * [11 - Range](ranges/main.go)
+* [12 - Timers](timers/main.go)
