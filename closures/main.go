@@ -20,6 +20,10 @@ func Run() {
 			200
 		*/
 	}
+
+	// To prove out the 'state' is contained to the function instance:
+	another := intSequence()
+	fmt.Println(another()) // 101
 }
 
 /*
