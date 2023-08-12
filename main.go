@@ -13,6 +13,7 @@ import (
 	"github.com/symonk/learning-golang/helloworld"
 	"github.com/symonk/learning-golang/ifelse"
 	"github.com/symonk/learning-golang/maps"
+	"github.com/symonk/learning-golang/pointers"
 	"github.com/symonk/learning-golang/ranges"
 	"github.com/symonk/learning-golang/recursion"
 	"github.com/symonk/learning-golang/slices"
@@ -44,6 +45,7 @@ var (
 		variables.Run,
 		closures.Run,
 		recursion.Run,
+		pointers.Run,
 	}
 )
 

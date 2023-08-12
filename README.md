@@ -27,6 +27,7 @@ all the examples `Run` functions sequentially in line with the table of contents
 * [13 - Variadic Functions](variadicfunctions/main.go)
 * [14 - Closures](closures/main.go)
 * [15 - Recursion](recursion/main.go)
+* [16 - Pointers](pointers/main.go)
 * [24 - Timers](timers/main.go)
 * [25 - Tickers](tickers/main.go)
 * [26 - WorkerGroups](workergroups/main.go)
