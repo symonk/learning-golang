@@ -8,6 +8,7 @@ import (
 	"github.com/symonk/learning-golang/arrays"
 	"github.com/symonk/learning-golang/constants"
 	"github.com/symonk/learning-golang/forloop"
+	"github.com/symonk/learning-golang/functions"
 	"github.com/symonk/learning-golang/helloworld"
 	"github.com/symonk/learning-golang/ifelse"
 	"github.com/symonk/learning-golang/maps"
@@ -22,7 +23,7 @@ import (
 )
 
 var (
-	functions = []func(){
+	allFunctions = []func(){
 		helloworld.Run,
 		values.Run,
 		variables.Run,
@@ -37,13 +38,15 @@ var (
 		timers.Run,
 		tickers.Run,
 		workergroups.Run,
+		functions.Run,
+		variables.Run,
 	}
 )
 
 func main() {
 	/* Run all modules synchronously.  Modules have avoided builtins and are occassionally
 	pluralised in their naming, i.e switches. */
-	for _, callable := range functions {
+	for _, callable := range allFunctions {
 		fmt.Println("-----")
 		fmt.Printf("Executing %s\n", runtime.FuncForPC(reflect.ValueOf(callable).Pointer()).Name())
 		callable()
