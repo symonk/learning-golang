@@ -7,6 +7,10 @@ func Run() {
 	functionWithArgs(1, 2, 3, 4, 5)
 	functionSingleReturn()
 	functionMultipleReturnValues()
+	// To 'ignore' return values and indicate we won't use them,
+	// The underscore `_` should be used.
+	one, _, _ := functionMultipleReturnValues()
+	fmt.Println(one)
 }
 
 func noReturnFunction() {
