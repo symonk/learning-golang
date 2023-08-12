@@ -6,6 +6,7 @@ import (
 	"runtime"
 
 	"github.com/symonk/learning-golang/arrays"
+	"github.com/symonk/learning-golang/closures"
 	"github.com/symonk/learning-golang/constants"
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/functions"
@@ -40,6 +41,7 @@ var (
 		workergroups.Run,
 		functions.Run,
 		variables.Run,
+		closures.Run,
 	}
 )
 
