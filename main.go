@@ -3,8 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"reflect"
-	"runtime"
 
 	"github.com/symonk/learning-golang/arrays"
 	"github.com/symonk/learning-golang/closures"
@@ -35,10 +33,19 @@ func main() {
 	flag.Parse()
 
 	options := buildMap()
+	if *module == "all" {
+		for _, value := range options {
+			fmt.Println("-----")
+			fmt.Printf("Executing %s\n", *module)
+			value()
 
-	for _, callable := range allFunctions {
-		fmt.Println("-----")
-		fmt.Printf("Executing %s\n", runtime.FuncForPC(reflect.ValueOf(callable).Pointer()).Name())
+		}
+	} else {
+		callable, ok := options[*module]
+		if !ok {
+			panic("no such module option " + *module)
+		}
+		fmt.Printf("executing %s\n", *module)
 		callable()
 	}
 }
