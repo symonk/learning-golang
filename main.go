@@ -17,6 +17,7 @@ import (
 	"github.com/symonk/learning-golang/ranges"
 	"github.com/symonk/learning-golang/recursion"
 	"github.com/symonk/learning-golang/slices"
+	"github.com/symonk/learning-golang/stringsrunes"
 	"github.com/symonk/learning-golang/switches"
 	"github.com/symonk/learning-golang/tickers"
 	"github.com/symonk/learning-golang/timers"
@@ -46,6 +47,7 @@ var (
 		closures.Run,
 		recursion.Run,
 		pointers.Run,
+		stringsrunes.Run,
 	}
 )
 
