@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"reflect"
 	"runtime"
@@ -27,38 +28,42 @@ import (
 	"github.com/symonk/learning-golang/workergroups"
 )
 
-var (
-	allFunctions = []func(){
-		helloworld.Run,
-		values.Run,
-		variables.Run,
-		constants.Run,
-		forloop.Run,
-		ifelse.Run,
-		switches.Run,
-		arrays.Run,
-		slices.Run,
-		maps.Run,
-		ranges.Run,
-		timers.Run,
-		tickers.Run,
-		workergroups.Run,
-		functions.Run,
-		variables.Run,
-		closures.Run,
-		recursion.Run,
-		pointers.Run,
-		stringsrunes.Run,
-		structs.Run,
-	}
-)
-
 func main() {
 	/* Run all modules synchronously.  Modules have avoided builtins and are occassionally
 	pluralised in their naming, i.e switches. */
+	module := flag.String("module", "all", "The name of the folder to run and exit, defaults to run all.")
+	flag.Parse()
+
+	options := buildMap()
+
 	for _, callable := range allFunctions {
 		fmt.Println("-----")
 		fmt.Printf("Executing %s\n", runtime.FuncForPC(reflect.ValueOf(callable).Pointer()).Name())
 		callable()
 	}
+}
+
+func buildMap() map[string]func() {
+	fnMap := make(map[string]func())
+	fnMap["helloworld"] = helloworld.Run
+	fnMap["values"] = values.Run
+	fnMap["variables"] = variables.Run
+	fnMap["constants"] = constants.Run
+	fnMap["forloop"] = forloop.Run
+	fnMap["ifelse"] = ifelse.Run
+	fnMap["switches"] = switches.Run
+	fnMap["arrays"] = arrays.Run
+	fnMap["slices"] = slices.Run
+	fnMap["maps"] = maps.Run
+	fnMap["ranges"] = ranges.Run
+	fnMap["timers"] = timers.Run
+	fnMap["tickers"] = tickers.Run
+	fnMap["workergroups"] = workergroups.Run
+	fnMap["functions"] = functions.Run
+	fnMap["closures"] = closures.Run
+	fnMap["recursion"] = recursion.Run
+	fnMap["pointers"] = pointers.Run
+	fnMap["stringsrunes"] = stringsrunes.Run
+	fnMap["structs"] = structs.Run
+	return fnMap
 }
