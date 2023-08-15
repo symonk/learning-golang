@@ -1,4 +1,4 @@
-package workergroups
+package workerpools
 
 import (
 	"fmt"

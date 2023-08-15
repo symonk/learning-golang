@@ -35,4 +35,4 @@ all the examples `Run` functions sequentially in line with the table of contents
 * [21 - Struct Embedding](structembedding/main.go)
 * [34 - Timers](timers/main.go)
 * [35 - Tickers](tickers/main.go)
-* [36 - WorkerGroups](workergroups/main.go)
+* [36 - Worker Pools](workerpools/main.go)

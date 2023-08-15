@@ -26,7 +26,7 @@ import (
 	"github.com/symonk/learning-golang/timers"
 	"github.com/symonk/learning-golang/values"
 	"github.com/symonk/learning-golang/variables"
-	"github.com/symonk/learning-golang/workergroups"
+	"github.com/symonk/learning-golang/workerpools"
 )
 
 func main() {
@@ -68,7 +68,7 @@ func buildMap() map[string]func() {
 	fnMap["ranges"] = ranges.Run
 	fnMap["timers"] = timers.Run
 	fnMap["tickers"] = tickers.Run
-	fnMap["workergroups"] = workergroups.Run
+	fnMap["workerpools"] = workerpools.Run
 	fnMap["functions"] = functions.Run
 	fnMap["closures"] = closures.Run
 	fnMap["recursion"] = recursion.Run
