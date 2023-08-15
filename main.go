@@ -11,6 +11,7 @@ import (
 	"github.com/symonk/learning-golang/functions"
 	"github.com/symonk/learning-golang/helloworld"
 	"github.com/symonk/learning-golang/ifelse"
+	"github.com/symonk/learning-golang/interfaces"
 	"github.com/symonk/learning-golang/maps"
 	"github.com/symonk/learning-golang/methods"
 	"github.com/symonk/learning-golang/pointers"
@@ -74,5 +75,6 @@ func buildMap() map[string]func() {
 	fnMap["stringsrunes"] = stringsrunes.Run
 	fnMap["structs"] = structs.Run
 	fnMap["methods"] = methods.Run
+	fnMap["interfaces"] = interfaces.Run
 	return fnMap
 }
