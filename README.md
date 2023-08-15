@@ -31,6 +31,8 @@ all the examples `Run` functions sequentially in line with the table of contents
 * [17 - Strings & Runes](stringsrunes/main.go)
 * [18 - Structs](structs/main.go)
 * [19 - Methods](methods/main.go)
+* [20 - Interfaces] (interfaces/main.go)
+* [21 - Struct Embedding] (structembedding/main.go)
 * [24 - Timers](timers/main.go)
 * [25 - Tickers](tickers/main.go)
 * [26 - WorkerGroups](workergroups/main.go)

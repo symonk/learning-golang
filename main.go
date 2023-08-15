@@ -19,6 +19,7 @@ import (
 	"github.com/symonk/learning-golang/recursion"
 	"github.com/symonk/learning-golang/slices"
 	"github.com/symonk/learning-golang/stringsrunes"
+	"github.com/symonk/learning-golang/structembedding"
 	"github.com/symonk/learning-golang/structs"
 	"github.com/symonk/learning-golang/switches"
 	"github.com/symonk/learning-golang/tickers"
@@ -76,5 +77,6 @@ func buildMap() map[string]func() {
 	fnMap["structs"] = structs.Run
 	fnMap["methods"] = methods.Run
 	fnMap["interfaces"] = interfaces.Run
+	fnMap["structembedding"] = structembedding.Run
 	return fnMap
 }
