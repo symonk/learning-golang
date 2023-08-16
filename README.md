@@ -33,6 +33,7 @@ all the examples `Run` functions sequentially in line with the table of contents
 * [19 - Methods](methods/main.go)
 * [20 - Interfaces](interfaces/main.go)
 * [21 - Struct Embedding](structembedding/main.go)
+* [22 - Generics](generics/main.go)
 * [34 - Timers](timers/main.go)
 * [35 - Tickers](tickers/main.go)
 * [36 - Worker Pools](workerpools/main.go)
