@@ -28,6 +28,7 @@ import (
 	"github.com/symonk/learning-golang/values"
 	"github.com/symonk/learning-golang/variables"
 	"github.com/symonk/learning-golang/workerpools"
+	"github.com/symonk/learning-golang/errors"
 )
 
 func main() {
@@ -80,5 +81,6 @@ func buildMap() map[string]func() {
 	fnMap["interfaces"] = interfaces.Run
 	fnMap["structembedding"] = structembedding.Run
 	fnMap["generics"] = generics.Run
+	fnMap["errors"] - errors.Run
 	return fnMap
 }
