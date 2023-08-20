@@ -7,6 +7,7 @@ import (
 	"github.com/symonk/learning-golang/arrays"
 	"github.com/symonk/learning-golang/closures"
 	"github.com/symonk/learning-golang/constants"
+	"github.com/symonk/learning-golang/errors"
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/functions"
 	"github.com/symonk/learning-golang/generics"
@@ -28,7 +29,6 @@ import (
 	"github.com/symonk/learning-golang/values"
 	"github.com/symonk/learning-golang/variables"
 	"github.com/symonk/learning-golang/workerpools"
-	"github.com/symonk/learning-golang/errors"
 )
 
 func main() {
@@ -81,6 +81,6 @@ func buildMap() map[string]func() {
 	fnMap["interfaces"] = interfaces.Run
 	fnMap["structembedding"] = structembedding.Run
 	fnMap["generics"] = generics.Run
-	fnMap["errors"] - errors.Run
+	fnMap["errors"] = errors.Run
 	return fnMap
 }
