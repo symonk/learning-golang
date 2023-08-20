@@ -35,6 +35,7 @@ all the examples `Run` functions sequentially in line with the table of contents
 * [21 - Struct Embedding](structembedding/main.go)
 * [22 - Generics](generics/main.go)
 * [23 - Errors](errors/main.go)
+* [24 - Goroutines](goroutines/main.go)
 * [34 - Timers](timers/main.go)
 * [35 - Tickers](tickers/main.go)
 * [36 - Worker Pools](workerpools/main.go)

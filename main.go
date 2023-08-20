@@ -11,6 +11,7 @@ import (
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/functions"
 	"github.com/symonk/learning-golang/generics"
+	"github.com/symonk/learning-golang/goroutines"
 	"github.com/symonk/learning-golang/helloworld"
 	"github.com/symonk/learning-golang/ifelse"
 	"github.com/symonk/learning-golang/interfaces"
@@ -82,5 +83,6 @@ func buildMap() map[string]func() {
 	fnMap["structembedding"] = structembedding.Run
 	fnMap["generics"] = generics.Run
 	fnMap["errors"] = errors.Run
+	fnMap["goroutines"] = goroutines.Run
 	return fnMap
 }
