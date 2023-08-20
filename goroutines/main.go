@@ -8,6 +8,8 @@ import (
 
 /*
 A `goroutine` is a lightweight thread of execution.
+Waitgroups are outlined in depth in the `WaitGroups` module
+but here includes a small taster for them aswell.
 */
 func Run() {
 	synchroniseExample()
