@@ -24,6 +24,7 @@ import (
 	"github.com/symonk/learning-golang/pointers"
 	"github.com/symonk/learning-golang/ranges"
 	"github.com/symonk/learning-golang/recursion"
+	"github.com/symonk/learning-golang/selects"
 	"github.com/symonk/learning-golang/slices"
 	"github.com/symonk/learning-golang/stringsrunes"
 	"github.com/symonk/learning-golang/structembedding"
@@ -92,5 +93,6 @@ func buildMap() map[string]func() {
 	fnMap["bufferedchannels"] = bufferedchannels.Run
 	fnMap["channelsynchronisation"] = channelsynchronisation.Run
 	fnMap["channeldirections"] = channeldirections.Run
+	fnMap["selects"] = selects.Run
 	return fnMap
 }
