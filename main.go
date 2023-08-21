@@ -6,6 +6,7 @@ import (
 
 	"github.com/symonk/learning-golang/arrays"
 	"github.com/symonk/learning-golang/bufferedchannels"
+	"github.com/symonk/learning-golang/channeldirections"
 	"github.com/symonk/learning-golang/channels"
 	"github.com/symonk/learning-golang/channelsynchronisation"
 	"github.com/symonk/learning-golang/closures"
@@ -90,5 +91,6 @@ func buildMap() map[string]func() {
 	fnMap["channels"] = channels.Run
 	fnMap["bufferedchannels"] = bufferedchannels.Run
 	fnMap["channelsynchronisation"] = channelsynchronisation.Run
+	fnMap["channeldirections"] = channeldirections.Run
 	return fnMap
 }

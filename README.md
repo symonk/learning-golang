@@ -39,6 +39,7 @@ all the examples `Run` functions sequentially in line with the table of contents
 * [25 - Channels](channels/main.go)
 * [26 - Buffered Channels](bufferedchannels/main.go)
 * [27 - Channel Synchronisation](channelsynchronisation/main.go)
+* [28 - Channel Directions](channeldirections/main.go)
 * [34 - Timers](timers/main.go)
 * [35 - Tickers](tickers/main.go)
 * [36 - Worker Pools](workerpools/main.go)
