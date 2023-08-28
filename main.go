@@ -58,7 +58,7 @@ func main() {
 	} else {
 		callable, ok := options[*module]
 		if !ok {
-			panic("no such module option " + *module)
+			panic("could not find a module named: `" + *module + "` Are you sure the folder name is correct?")
 		}
 		fmt.Printf("executing %s\n", *module)
 		callable()
@@ -100,7 +100,7 @@ func buildMap() map[string]func() {
 	fnMap["selects"] = selects.Run
 	fnMap["timeouts"] = timeouts.Run
 	fnMap["nonblockingchannelops"] = nonblockingchannelops.Run
-	fnMap["closingchannel"] = closingchannels.Run
+	fnMap["closingchannels"] = closingchannels.Run
 	fnMap["rangeoverchannels"] = rangeoverchannels.Run
 	return fnMap
 }
