@@ -31,6 +31,7 @@ import (
 	"github.com/symonk/learning-golang/structs"
 	"github.com/symonk/learning-golang/switches"
 	"github.com/symonk/learning-golang/tickers"
+	"github.com/symonk/learning-golang/timeouts"
 	"github.com/symonk/learning-golang/timers"
 	"github.com/symonk/learning-golang/values"
 	"github.com/symonk/learning-golang/variables"
@@ -94,5 +95,6 @@ func buildMap() map[string]func() {
 	fnMap["channelsynchronisation"] = channelsynchronisation.Run
 	fnMap["channeldirections"] = channeldirections.Run
 	fnMap["selects"] = selects.Run
+	fnMap["timeouts"] = timeouts.Run
 	return fnMap
 }
