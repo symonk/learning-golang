@@ -21,6 +21,7 @@ import (
 	"github.com/symonk/learning-golang/interfaces"
 	"github.com/symonk/learning-golang/maps"
 	"github.com/symonk/learning-golang/methods"
+	"github.com/symonk/learning-golang/nonblockingchannelops"
 	"github.com/symonk/learning-golang/pointers"
 	"github.com/symonk/learning-golang/ranges"
 	"github.com/symonk/learning-golang/recursion"
@@ -96,5 +97,6 @@ func buildMap() map[string]func() {
 	fnMap["channeldirections"] = channeldirections.Run
 	fnMap["selects"] = selects.Run
 	fnMap["timeouts"] = timeouts.Run
+	fnMap["nonblockingchannelops"] = nonblockingchannelops.Run
 	return fnMap
 }
