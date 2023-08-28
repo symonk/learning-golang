@@ -7,6 +7,14 @@ each module contains a `main.go` and the entrypoint to that module is the `Run` 
 `main` functions in each package is not viable.  The `main.go` in the root directory synchronously calls
 all the examples `Run` functions sequentially in line with the table of contents below.
 
+All modules are exposed under the `-module` flag.  To run a particular exercise, take the top level folder name
+and run it like so:
+
+```console
+# To run the `closingchannels` examples.
+go run . -module closingchannels
+```
+
 -----
 
 

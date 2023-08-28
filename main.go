@@ -100,5 +100,7 @@ func buildMap() map[string]func() {
 	fnMap["selects"] = selects.Run
 	fnMap["timeouts"] = timeouts.Run
 	fnMap["nonblockingchannelops"] = nonblockingchannelops.Run
+	fnMap["closingchannel"] = closingchannels.Run
+	fnMap["rangeoverchannels"] = rangeoverchannels.Run
 	return fnMap
 }
