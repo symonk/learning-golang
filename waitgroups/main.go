@@ -1,6 +1,7 @@
 package waitgroups
 
 import (
+	"fmt"
 	"sync"
 	"time"
 )
@@ -31,12 +32,16 @@ func usingAWaitGroup() {
 
 	for i := 0; i < size; i++ {
 		// Let's do some work across a sizable amount of goroutines.
-		go func() {
+		go func(i int) {
 			// Decrement (atomically) the waitgroup to signal this goroutine has finished it's
 			// heavily IO simulated workload.
-			defer wg.Done()
+			fmt.Println("Starting task: ", i)
+			defer func() {
+				fmt.Println("Finishing task: ", i)
+				wg.Done()
+			}()
 			time.Sleep(3 * time.Second)
-		}()
+		}(i)
 	}
 
 	// Now, let's wait until all the goroutines have finished their workloads
