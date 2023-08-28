@@ -38,6 +38,7 @@ import (
 	"github.com/symonk/learning-golang/timers"
 	"github.com/symonk/learning-golang/values"
 	"github.com/symonk/learning-golang/variables"
+	"github.com/symonk/learning-golang/waitgroups"
 	"github.com/symonk/learning-golang/workerpools"
 )
 
@@ -102,5 +103,6 @@ func buildMap() map[string]func() {
 	fnMap["nonblockingchannelops"] = nonblockingchannelops.Run
 	fnMap["closingchannels"] = closingchannels.Run
 	fnMap["rangeoverchannels"] = rangeoverchannels.Run
+	fnMap["waitgroups"] = waitgroups.Run
 	return fnMap
 }
