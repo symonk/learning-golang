@@ -1,0 +1,5 @@
+package closingchannels
+
+func Run() {
+
+}
