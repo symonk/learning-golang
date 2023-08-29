@@ -26,6 +26,7 @@ import (
 	"github.com/symonk/learning-golang/pointers"
 	"github.com/symonk/learning-golang/rangeoverchannels"
 	"github.com/symonk/learning-golang/ranges"
+	"github.com/symonk/learning-golang/ratelimiting"
 	"github.com/symonk/learning-golang/recursion"
 	"github.com/symonk/learning-golang/selects"
 	"github.com/symonk/learning-golang/slices"
@@ -104,5 +105,6 @@ func buildMap() map[string]func() {
 	fnMap["closingchannels"] = closingchannels.Run
 	fnMap["rangeoverchannels"] = rangeoverchannels.Run
 	fnMap["waitgroups"] = waitgroups.Run
+	fnMap["ratelimiting"] = ratelimiting.Run
 	return fnMap
 }

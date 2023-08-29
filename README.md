@@ -57,3 +57,4 @@ go run . -module closingchannels
 * [35 - Tickers](tickers/main.go)
 * [36 - Worker Pools](workerpools/main.go)
 * [37 - Waitgroups](waitgroups.go)
+* [38 - Rate Limiting](ratelimiting/main.go)
