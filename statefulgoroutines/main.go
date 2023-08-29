@@ -1,0 +1,3 @@
+package statefulgoroutines
+
+func Run() {}

@@ -1,0 +1,3 @@
+package atomiccounters
+
+func Run() {}
