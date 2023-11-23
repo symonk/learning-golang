@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/symonk/learning-golang/arrays"
+	"github.com/symonk/learning-golang/atomiccounters"
 	"github.com/symonk/learning-golang/bufferedchannels"
 	"github.com/symonk/learning-golang/channeldirections"
 	"github.com/symonk/learning-golang/channels"
@@ -106,5 +107,6 @@ func buildMap() map[string]func() {
 	fnMap["rangeoverchannels"] = rangeoverchannels.Run
 	fnMap["waitgroups"] = waitgroups.Run
 	fnMap["ratelimiting"] = ratelimiting.Run
+	fnMap["atomiccounters"] = atomiccounters.Run
 	return fnMap
 }
