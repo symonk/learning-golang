@@ -28,7 +28,7 @@ type Foo struct {
 
 // Sorting a user defined; custom type
 func sortingCustomType() {
-	foos := []Foo{Foo{x: 3}, Foo{x: 2}, Foo{x: 100}, Foo{x: 1}}
+	foos := []Foo{{x: 3}, {x: 2}, {x: 100}, {x: 1}}
 	sort.Slice(foos[:], func(i, j int) bool {
 		return foos[i].x < foos[j].x
 	})

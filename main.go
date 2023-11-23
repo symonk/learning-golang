@@ -23,6 +23,7 @@ import (
 	"github.com/symonk/learning-golang/interfaces"
 	"github.com/symonk/learning-golang/maps"
 	"github.com/symonk/learning-golang/methods"
+	"github.com/symonk/learning-golang/mutexes"
 	"github.com/symonk/learning-golang/nonblockingchannelops"
 	"github.com/symonk/learning-golang/pointers"
 	"github.com/symonk/learning-golang/rangeoverchannels"
@@ -31,6 +32,9 @@ import (
 	"github.com/symonk/learning-golang/recursion"
 	"github.com/symonk/learning-golang/selects"
 	"github.com/symonk/learning-golang/slices"
+	"github.com/symonk/learning-golang/sorting"
+	"github.com/symonk/learning-golang/sortingbyfunctions"
+	"github.com/symonk/learning-golang/statefulgoroutines"
 	"github.com/symonk/learning-golang/stringsrunes"
 	"github.com/symonk/learning-golang/structembedding"
 	"github.com/symonk/learning-golang/structs"
@@ -42,9 +46,6 @@ import (
 	"github.com/symonk/learning-golang/variables"
 	"github.com/symonk/learning-golang/waitgroups"
 	"github.com/symonk/learning-golang/workerpools"
-	"github.com/symonk/learning-golang/mutexes"
-	"github.com/symonk/learning-golang/statefulgoroutines"
-	"github.com/symonk/learning-golang/sorting"
 )
 
 func main() {
@@ -114,5 +115,6 @@ func buildMap() map[string]func() {
 	fnMap["mutexes"] = mutexes.Run
 	fnMap["statefulgoroutines"] = statefulgoroutines.Run
 	fnMap["sorting"] = sorting.Run
+	fnMap["sortingbyfunctions"] = sortingbyfunctions.Run
 	return fnMap
 }
