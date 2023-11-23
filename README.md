@@ -59,3 +59,4 @@ go run . -module closingchannels
 * [37 - Waitgroups](waitgroups.go)
 * [38 - Rate Limiting](ratelimiting/main.go)
 * [39 - Atomic Counters](atomiccounters/main.go)
+* [40 - Mutexes](mutexes/main.go)
