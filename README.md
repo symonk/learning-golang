@@ -62,4 +62,4 @@ go run . -module closingchannels
 * [40 - Mutexes](mutexes/main.go)
 * [41 - Stateful Goroutines](statefulgoroutines/main.go)
 * [42 - Sorting](sorting/main.go)
-* [43 - SortingByFunctions](sortingbyfunctions/main.go)
+* [43 - Custom Comparator Functions](sortingbyfunctions/main.go)
