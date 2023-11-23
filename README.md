@@ -61,3 +61,4 @@ go run . -module closingchannels
 * [39 - Atomic Counters](atomiccounters/main.go)
 * [40 - Mutexes](mutexes/main.go)
 * [41 - Stateful Goroutines](statefulgoroutines/main.go)
+* [42 - Sorting](sorting/main.go)

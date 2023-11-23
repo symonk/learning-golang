@@ -44,6 +44,7 @@ import (
 	"github.com/symonk/learning-golang/workerpools"
 	"github.com/symonk/learning-golang/mutexes"
 	"github.com/symonk/learning-golang/statefulgoroutines"
+	"github.com/symonk/learning-golang/sorting"
 )
 
 func main() {
@@ -112,5 +113,6 @@ func buildMap() map[string]func() {
 	fnMap["atomiccounters"] = atomiccounters.Run
 	fnMap["mutexes"] = mutexes.Run
 	fnMap["statefulgoroutines"] = statefulgoroutines.Run
+	fnMap["sorting"] = sorting.Run
 	return fnMap
 }
