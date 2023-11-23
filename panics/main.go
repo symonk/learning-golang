@@ -1,0 +1,5 @@
+package panics
+
+func Run() {
+
+}

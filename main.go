@@ -25,6 +25,7 @@ import (
 	"github.com/symonk/learning-golang/methods"
 	"github.com/symonk/learning-golang/mutexes"
 	"github.com/symonk/learning-golang/nonblockingchannelops"
+	"github.com/symonk/learning-golang/panics"
 	"github.com/symonk/learning-golang/pointers"
 	"github.com/symonk/learning-golang/rangeoverchannels"
 	"github.com/symonk/learning-golang/ranges"
@@ -116,5 +117,6 @@ func buildMap() map[string]func() {
 	fnMap["statefulgoroutines"] = statefulgoroutines.Run
 	fnMap["sorting"] = sorting.Run
 	fnMap["sortingbyfunctions"] = sortingbyfunctions.Run
+	fnMap["panics"] = panics.Run
 	return fnMap
 }
