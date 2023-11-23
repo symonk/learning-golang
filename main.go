@@ -43,6 +43,7 @@ import (
 	"github.com/symonk/learning-golang/waitgroups"
 	"github.com/symonk/learning-golang/workerpools"
 	"github.com/symonk/learning-golang/mutexes"
+	"github.com/symonk/learning-golang/statefulgoroutines"
 )
 
 func main() {
@@ -110,5 +111,6 @@ func buildMap() map[string]func() {
 	fnMap["ratelimiting"] = ratelimiting.Run
 	fnMap["atomiccounters"] = atomiccounters.Run
 	fnMap["mutexes"] = mutexes.Run
+	fnMap["statefulgoroutines"] = statefulgoroutines.Run
 	return fnMap
 }

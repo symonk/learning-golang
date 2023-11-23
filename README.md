@@ -60,3 +60,4 @@ go run . -module closingchannels
 * [38 - Rate Limiting](ratelimiting/main.go)
 * [39 - Atomic Counters](atomiccounters/main.go)
 * [40 - Mutexes](mutexes/main.go)
+* [41 - Stateful Goroutines](statefulgoroutines/main.go)
