@@ -13,6 +13,7 @@ import (
 	"github.com/symonk/learning-golang/closingchannels"
 	"github.com/symonk/learning-golang/closures"
 	"github.com/symonk/learning-golang/constants"
+	"github.com/symonk/learning-golang/contexts"
 	"github.com/symonk/learning-golang/errors"
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/functions"
@@ -68,7 +69,7 @@ func main() {
 		if !ok {
 			panic("could not find a module named: `" + *module + "` Are you sure the folder name is correct?")
 		}
-		fmt.Printf("executing %s\n", *module)
+		fmt.Printf("Executing %s\n", *module)
 		callable()
 	}
 }
@@ -118,5 +119,6 @@ func buildMap() map[string]func() {
 	fnMap["sorting"] = sorting.Run
 	fnMap["sortingbyfunctions"] = sortingbyfunctions.Run
 	fnMap["panics"] = panics.Run
+	fnMap["contexts"] = contexts.Run
 	return fnMap
 }
