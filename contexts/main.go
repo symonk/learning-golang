@@ -11,22 +11,60 @@ import (
 // They also allow carrying request-scoped value across boundaries
 // Note: CancelFuncs should always be closed to avoid leakages.
 func Run() {
-	deadlineCancellation()
+	// cancelling because of a deadline.
+	if err := deadlineCancellation(); err != nil {
+		fmt.Println("Received a deadline error: ", err.Error())
+	}
+	// cancelling because of a direct cancel
+	if err := contextCancel(); err != nil {
+		fmt.Println("Received an explicit context cancel: ", err.Error())
+	}
+
+	// cancelling because of a timeout
+	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
+	defer cancel()
+	if err := contextTimeout(ctx); err != nil {
+		fmt.Println("Received a cancellation error: ", err.Error())
+	}
 }
 
-func deadlineCancellation() {
+func deadlineCancellation() error {
 
-	ctx, cancel := context.WithDeadlineCause(context.Background(), time.Now().Add(10*time.Second), errors.New("Deadline exceeded!"))
+	ctx, cancel := context.WithDeadlineCause(context.Background(), time.Now().Add(3*time.Second), errors.New("Deadline exceeded!"))
 	defer cancel()
 	for {
 		select {
 		case <-ctx.Done():
-			fmt.Println("Context deadline firing...")
-			panic(ctx.Err())
+			return ctx.Err()
 		default:
-			fmt.Println("Still doing some heavy IO.")
+			fmt.Println("No context deadline yet, will keep doing IO")
 			time.Sleep(time.Second)
 		}
+	}
+}
+
+func contextTimeout(ctx context.Context) error {
+	// Block the channel with a simple goro.
+	neverReady := make(chan struct{})
+	select {
+	case <-neverReady:
+		//
+	case <-ctx.Done():
+		return ctx.Err()
+	}
+	return nil
+}
+
+func contextCancel() error {
+	ctx, cancel := context.WithCancel(context.Background())
+	go func() {
+		time.Sleep(2 * time.Second)
+		// force cancel!
+		cancel()
+	}()
+	select {
+	case <-ctx.Done():
+		return ctx.Err()
 	}
 }
 
