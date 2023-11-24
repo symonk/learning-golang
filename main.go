@@ -32,6 +32,7 @@ import (
 	"github.com/symonk/learning-golang/rangeoverchannels"
 	"github.com/symonk/learning-golang/ranges"
 	"github.com/symonk/learning-golang/ratelimiting"
+	"github.com/symonk/learning-golang/recover"
 	"github.com/symonk/learning-golang/recursion"
 	"github.com/symonk/learning-golang/selects"
 	"github.com/symonk/learning-golang/slices"
@@ -121,6 +122,7 @@ func buildMap() map[string]func() {
 	fnMap["sortingbyfunctions"] = sortingbyfunctions.Run
 	fnMap["panics"] = panics.Run
 	fnMap["defer"] = defers.Run
+	fnMap["recover"] = recover.Run
 	fnMap["contexts"] = contexts.Run
 	return fnMap
 }

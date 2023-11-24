@@ -64,5 +64,6 @@ go run . -module closingchannels
 * [42 - Sorting](sorting/main.go)
 * [43 - Custom Comparator Functions](sortingbyfunctions/main.go)
 * [44 - Panic](panics/main.go)
-* [45 - Defer](defers/panic.go)
+* [45 - Defer](defers/main.go)
+* [46 - Recover](recover/main.go)
 * [77 - Contexts](contexts/main.go)
