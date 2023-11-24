@@ -51,7 +51,7 @@ go run . -module closingchannels
 * [29 - Selects](selects/main.go)
 * [30 - Timeouts](timeouts/main.go)
 * [31 - Non Blocking Channel Operations](nonblockingchannelops/main.go)
-* [32 - Closing Channels](closingchannel/main.go)
+* [32 - Closing Channels](closingchannels/main.go)
 * [33 - Range Over Channels](rangeoverchannels/main.go)
 * [34 - Timers](timers/main.go)
 * [35 - Tickers](tickers/main.go)
