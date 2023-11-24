@@ -16,6 +16,7 @@ import (
 	"github.com/symonk/learning-golang/contexts"
 	"github.com/symonk/learning-golang/defers"
 	"github.com/symonk/learning-golang/errors"
+	"github.com/symonk/learning-golang/execingprocesses"
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/functions"
 	"github.com/symonk/learning-golang/generics"
@@ -38,6 +39,7 @@ import (
 	"github.com/symonk/learning-golang/slices"
 	"github.com/symonk/learning-golang/sorting"
 	"github.com/symonk/learning-golang/sortingbyfunctions"
+	"github.com/symonk/learning-golang/spawningprocesses"
 	"github.com/symonk/learning-golang/statefulgoroutines"
 	"github.com/symonk/learning-golang/stringfunctions"
 	"github.com/symonk/learning-golang/stringsrunes"
@@ -127,5 +129,7 @@ func buildMap() map[string]func() {
 	fnMap["stringfunctions"] = stringfunctions.Run
 	//
 	fnMap["contexts"] = contexts.Run
+	fnMap["spawningprocesses"] = spawningprocesses.Run
+	fnMap["execingprocesses"] = execingprocesses.Run
 	return fnMap
 }
