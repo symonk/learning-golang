@@ -63,6 +63,6 @@ go run . -module closingchannels
 * [41 - Stateful Goroutines](statefulgoroutines/main.go)
 * [42 - Sorting](sorting/main.go)
 * [43 - Custom Comparator Functions](sortingbyfunctions/main.go)
-* [44 - Panic](panic/main.go)
-...
+* [44 - Panic](panics/main.go)
+* [45 - Defer](defers/panic.go)
 * [77 - Contexts](contexts/main.go)

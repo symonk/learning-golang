@@ -14,6 +14,7 @@ import (
 	"github.com/symonk/learning-golang/closures"
 	"github.com/symonk/learning-golang/constants"
 	"github.com/symonk/learning-golang/contexts"
+	"github.com/symonk/learning-golang/defers"
 	"github.com/symonk/learning-golang/errors"
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/functions"
@@ -119,6 +120,7 @@ func buildMap() map[string]func() {
 	fnMap["sorting"] = sorting.Run
 	fnMap["sortingbyfunctions"] = sortingbyfunctions.Run
 	fnMap["panics"] = panics.Run
+	fnMap["defer"] = defers.Run
 	fnMap["contexts"] = contexts.Run
 	return fnMap
 }
