@@ -66,4 +66,5 @@ go run . -module closingchannels
 * [44 - Panic](panics/main.go)
 * [45 - Defer](defers/main.go)
 * [46 - Recover](recover/main.go)
+* [47 - String Functions](stringfunctions/main.go)
 * [77 - Contexts](contexts/main.go)
