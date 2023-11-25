@@ -17,6 +17,7 @@ import (
 	"github.com/symonk/learning-golang/defers"
 	"github.com/symonk/learning-golang/errors"
 	"github.com/symonk/learning-golang/execingprocesses"
+	"github.com/symonk/learning-golang/exit"
 	"github.com/symonk/learning-golang/forloop"
 	"github.com/symonk/learning-golang/functions"
 	"github.com/symonk/learning-golang/generics"
@@ -133,5 +134,6 @@ func buildMap() map[string]func() {
 	fnMap["spawningprocesses"] = spawningprocesses.Run
 	fnMap["execingprocesses"] = execingprocesses.Run
 	fnMap["signals"] = signals.Run
+	fnMap["exit"] = exit.Run
 	return fnMap
 }
