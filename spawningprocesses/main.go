@@ -2,6 +2,7 @@ package spawningprocesses
 
 import (
 	"fmt"
+	"io"
 	"os/exec"
 )
 
@@ -14,6 +15,21 @@ func Run() {
 	commandWithArgs("date", "-u")
 	// error with args:
 	commandWithArgs("date", "-x")
+	// piping basics
+	commandWithPiping("grep", "hello")
+}
+
+func commandWithPiping(cmd string, args ...string) {
+	grepCommand := exec.Command(cmd, args...)
+	in, _ := grepCommand.StdinPipe()
+	out, _ := grepCommand.StdoutPipe()
+	grepCommand.Start()
+	in.Write([]byte("hello grep\ngoodbye grep"))
+	in.Close()
+	grepBytes, _ := io.ReadAll(out)
+	grepCommand.Wait()
+	fmt.Println("> grep hello")
+	fmt.Println(string(grepBytes))
 }
 
 // A very basic command without any flags/args provided.
