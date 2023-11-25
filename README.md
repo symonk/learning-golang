@@ -70,3 +70,4 @@ go run . -module closingchannels
 * [77 - Contexts](contexts/main.go)
 * [78 - Spawning Processes](spawningprocesses/main.go)
 * [79 - Execing Processes](execingprocesses/main.go)
+* [80 - Signals](signals/main.go)

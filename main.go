@@ -36,6 +36,7 @@ import (
 	"github.com/symonk/learning-golang/recover"
 	"github.com/symonk/learning-golang/recursion"
 	"github.com/symonk/learning-golang/selects"
+	"github.com/symonk/learning-golang/signals"
 	"github.com/symonk/learning-golang/slices"
 	"github.com/symonk/learning-golang/sorting"
 	"github.com/symonk/learning-golang/sortingbyfunctions"
@@ -131,5 +132,6 @@ func buildMap() map[string]func() {
 	fnMap["contexts"] = contexts.Run
 	fnMap["spawningprocesses"] = spawningprocesses.Run
 	fnMap["execingprocesses"] = execingprocesses.Run
+	fnMap["signals"] = signals.Run
 	return fnMap
 }
