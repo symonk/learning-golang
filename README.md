@@ -68,6 +68,8 @@ go run . -module closingchannels
 * [46 - Recover](recover/main.go)
 * [47 - String Functions](stringfunctions/main.go)
 * [48 - String Formatting](stringformatting/main.go)
+* [49 - Text Templating](texttemplates/main.go)
+* [50 - Regexp](regex/main.go)
 * [77 - Contexts](contexts/main.go)
 * [78 - Spawning Processes](spawningprocesses/main.go)
 * [79 - Execing Processes](execingprocesses/main.go)
