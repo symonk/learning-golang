@@ -67,6 +67,7 @@ go run . -module closingchannels
 * [45 - Defer](defers/main.go)
 * [46 - Recover](recover/main.go)
 * [47 - String Functions](stringfunctions/main.go)
+* [48 - String Formatting](stringformatting/main.go)
 * [77 - Contexts](contexts/main.go)
 * [78 - Spawning Processes](spawningprocesses/main.go)
 * [79 - Execing Processes](execingprocesses/main.go)

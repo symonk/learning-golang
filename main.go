@@ -43,6 +43,7 @@ import (
 	"github.com/symonk/learning-golang/sortingbyfunctions"
 	"github.com/symonk/learning-golang/spawningprocesses"
 	"github.com/symonk/learning-golang/statefulgoroutines"
+	"github.com/symonk/learning-golang/stringformatting"
 	"github.com/symonk/learning-golang/stringfunctions"
 	"github.com/symonk/learning-golang/stringsrunes"
 	"github.com/symonk/learning-golang/structembedding"
@@ -129,6 +130,7 @@ func buildMap() map[string]func() {
 	fnMap["defer"] = defers.Run
 	fnMap["recover"] = recover.Run
 	fnMap["stringfunctions"] = stringfunctions.Run
+	fnMap["stringformatting"] = stringformatting.Run
 	//
 	fnMap["contexts"] = contexts.Run
 	fnMap["spawningprocesses"] = spawningprocesses.Run
