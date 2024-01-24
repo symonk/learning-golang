@@ -1,10 +1,10 @@
 package statefulgoroutines
 
 import (
-	"math/rand"
-	"time"
 	"fmt"
+	"math/rand"
 	"sync/atomic"
+	"time"
 )
 
 // Previously we looked at sharing complex state access
@@ -18,16 +18,16 @@ func Run() {
 	reads := make(chan ReadOperation)
 	writes := make(chan WriteOperation)
 
-	// Create the goroutine, responsible for managing the state, a gate-keeper 
+	// Create the goroutine, responsible for managing the state, a gate-keeper
 	// This goroutine is responsible for monitoring the read/write channels
 	// and maintaining state accordingly
 	go func() {
 		state := make(map[int]int)
 		for {
 			select {
-			case read := <- reads:
+			case read := <-reads:
 				read.response <- state[read.key]
-			case write := <- writes:
+			case write := <-writes:
 				state[write.key] = state[write.value]
 				write.response <- true
 			}
@@ -41,10 +41,10 @@ func Run() {
 		go func() {
 			for {
 				readOp := ReadOperation{
-					key: rand.Intn(5),
+					key:      rand.Intn(5),
 					response: make(chan int)}
 				reads <- readOp
-				<- readOp.response
+				<-readOp.response
 				atomic.AddUint64(&readOperations, 1)
 				time.Sleep(time.Millisecond)
 
@@ -57,12 +57,12 @@ func Run() {
 		go func() {
 			for {
 				writeOp := WriteOperation{
-					key: rand.Intn(10),
-					value: rand.Intn(10),
+					key:      rand.Intn(10),
+					value:    rand.Intn(10),
 					response: make(chan bool),
 				}
 				writes <- writeOp
-				<- writeOp.response
+				<-writeOp.response
 				atomic.AddUint64(&writeOperations, 1)
 				time.Sleep(time.Millisecond)
 			}
@@ -74,16 +74,15 @@ func Run() {
 	fmt.Println("writeOperations final: ", atomic.LoadUint64(&writeOperations))
 }
 
-
 // A shared read operation
 type ReadOperation struct {
-	key int
+	key      int
 	response chan int
 }
 
 // A shared writer operation
 type WriteOperation struct {
-	key int
-	value int
+	key      int
+	value    int
 	response chan bool
 }

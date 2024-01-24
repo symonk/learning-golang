@@ -36,7 +36,7 @@ func Run() {
 // Note: Mutexes should not be copied; so pass this by pointer.
 type Container struct {
 	counters map[string]int
-	mutex sync.Mutex
+	mutex    sync.Mutex
 }
 
 // Acquire the mutex lock and carry out the work.
