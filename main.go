@@ -15,6 +15,7 @@ import (
 	"github.com/symonk/learning-golang/constants"
 	"github.com/symonk/learning-golang/contexts"
 	"github.com/symonk/learning-golang/defers"
+	"github.com/symonk/learning-golang/errgroups"
 	"github.com/symonk/learning-golang/errors"
 	"github.com/symonk/learning-golang/execingprocesses"
 	"github.com/symonk/learning-golang/exit"
@@ -141,5 +142,6 @@ func buildMap() map[string]func() {
 	fnMap["execingprocesses"] = execingprocesses.Run
 	fnMap["signals"] = signals.Run
 	fnMap["exit"] = exit.Run
+	fnMap["errgroups"] = errgroups.Run
 	return fnMap
 }

@@ -100,3 +100,4 @@ go run . -module closingchannels
 * [78 - Execing Processes](execingprocesses/main.go)
 * [79 - Signals](signals/main.go)
 * [80 - Exit](exit/main.go)
+* [81 - ErrGroup](errgroups/main.go)
