@@ -1,5 +1,5 @@
-package .solid
+package main
 
 func main() {
-	
+
 }

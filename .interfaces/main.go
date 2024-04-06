@@ -31,7 +31,7 @@ func main() {
 
 	// An example of how interfaces can be used to allow user code to modify
 	// core behaviour without relying on internal refactoring, decoupling the
-	// the code.  (One of many benefits to benefits)
+	// the code.  (One of many benefits to interfaces)
 	half := &HalfDiscounter{}
 	none := &NoDiscounter{}
 	fmt.Println(ApplyDiscount(100, half))
