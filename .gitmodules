@@ -1,0 +1,3 @@
+[submodule "learning-go-book"]
+	path = learning-go-book
+	url = git@github.com:symonk/learning-go-book.git
