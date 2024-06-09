@@ -26,7 +26,11 @@ func main() {
 		any interface type.
 	*/
 
+	// primer on compiler var reads
 	varsAreRead()
+
+	// Ways of declaring errors
+	declaringErrors()
 
 }
 
@@ -50,4 +54,17 @@ func varsAreRead() {
 	if err != nil {
 		fmt.Println(err)
 	}
+}
+
+// declaringErrors outlines the two core ways to create a new (simple) error
+func declaringErrors() {
+	basicErr := errors.New("this is a basic error")
+	runtimeInfoErr := fmt.Errorf("this is a basic error for number %d", 100)
+	_ = basicErr
+	_ = runtimeInfoErr
+}
+
+// customErrors outlines a way to create custom errors
+func customErrors() {
+
 }
