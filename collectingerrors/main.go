@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-var sentinelErr = errors.New("timed out")
+var ErrSentinelTimeout = errors.New("timed out")
 
 // Often it is desirable to collect the output of various goroutines
 // into one central error.  We can achieve this by using a waitgroup
@@ -15,7 +15,7 @@ var sentinelErr = errors.New("timed out")
 func main() {
 	if err := run(); err != nil {
 		fmt.Printf("We got an error %s", err.Error())
-		if errors.Is(err, sentinelErr) {
+		if errors.Is(err, ErrSentinelTimeout) {
 			fmt.Println("Sentinel error.")
 		}
 	}
@@ -32,7 +32,7 @@ func run() error {
 		go func(i int) {
 			defer wg.Done()
 			time.Sleep(time.Second)
-			results <- sentinelErr
+			results <- ErrSentinelTimeout
 		}(i)
 	}
 
