@@ -101,3 +101,4 @@ go run . -module closingchannels
 * [79 - Signals](signals/main.go)
 * [80 - Exit](exit/main.go)
 * [81 - ErrGroup](errgroups/main.go)
+* [82 - Pointer Vs Value Receiver](ptr_vs_value_receiver/main.go)
